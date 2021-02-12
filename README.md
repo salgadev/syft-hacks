@@ -35,13 +35,11 @@ Security research on OpenMined repositories
 
       `cd ~/research/[REPO]`
 
-Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else. 
+Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else.
 
   - To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log.
 
   `bandit -r . >~/research/$now/bandit/[REPO]-report.log`
-
-  bandit -r . >~/research/$now/bandit/$REPO-report.log
 
   - And a medium to high severity, high confidence one
 
@@ -50,3 +48,7 @@ Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $R
   - To run a safety check and save the report
 
     `safety check>~/research/$now/safety/[REPO]-safety-check.log`
+
+EXAMPLES:
+bandit -r . >~/research/$now/bandit/$REPO-report.log
+bandit -r -iii -ll -lll . >~/research/$now/bandit/$REPO-iii-ll-lll-report.log
