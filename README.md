@@ -1,5 +1,5 @@
 # syft-hacks
-Security research on OpenMined repositories
+Security research on OpenMined repositories. Part of the OpenMined core security audit project. 
 
 ## Getting started / how to replicate
 1. Download and install [VMWare Workstation](http://www.vmware.com/go/tryworkstation-win)
@@ -28,7 +28,7 @@ Security research on OpenMined repositories
 
   - Make folders for each library you will be using (e.g. Bandit, Safety, etc) inside of today's date folder
 
-     `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety`
+     `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety && mkdir ~/research/$now/trivy`
 
 ## Researching the target repo
 
@@ -36,18 +36,35 @@ Change directory into the target repo (e.g PySyft). *Replace **[REPO]** with the
 
 `cd ~/research/[REPO]`
 
-Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else.
+Better yet, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else. I use this notation from now on.
 
 ### Bandit
 To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log:
 
-`bandit -r . >~/research/$now/bandit/[REPO]-report.log`
+`bandit -r . >~/research/$now/bandit/$REPO-report.log`
 
 And a medium to high severity, high confidence one:
 
-`bandit -r -iii -ll . >~/research/$now/bandit/[REPO]-iii-ll-report.log`
+`bandit -r -iii -ll . >~/research/$now/bandit/$REPO-iii-ll-report.log`
 
 ### Safety
 To run a safety check of your virtual environment and save the report, run the following:
 
-`safety check>~/research/$now/safety/[REPO]-safety-check.log`
+`safety check>~/research/$now/safety/$REPO-safety-check.log`
+
+## Researching Docker containers
+### Install Trivy on Debian/Ubuntu/Kali
+Check [Trivy Releases](https://github.com/aquasecurity/trivy/releases) and replace the version number to install the latest one
+
+`wget https://github.com/aquasecurity/trivy/releases/download/v0.16.0/trivy_0.16.0_Linux-64bit.deb`
+
+`sudo dpkg -i trivy_0.16.0_Linux-64bit.deb`
+
+### Trivy Quickstart
+For example, to check the PyGrid network development image.
+
+`trivy image openmined/grid-network:development>~/research/$now/trivy/$REPO-network-report.log`
+
+**Do not** use the *latest* tag as it is a known issue with Trivy.
+
+trivy image --severity "HIGH, CRITICAL" openmined/grid-node:development>~/research/$now/trivy/$REPO-node-dev-high-critical-report.log
