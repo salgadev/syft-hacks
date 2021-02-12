@@ -15,7 +15,7 @@ Security research on OpenMined repositories
 
 7. Install security libraries on your environment
 
-  `pip install -r requirements.txt`
+    `pip install -r requirements.txt`
 
   If --user error, run `sudo su` before installing but `exit` afterwards.
 
@@ -26,29 +26,28 @@ Security research on OpenMined repositories
 
   `now=`date +"%Y-%m-%d"` && mkdir ~/research/$now`
 
-  - Make folders for each library you will be using (e.g. Bandit, Safety) inside of today's date folder
+  - Make folders for each library you will be using (e.g. Bandit, Safety, etc) inside of today's date folder
 
   `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety`
 
 # Attacking/Researching the target repo
-  - cd into the target repo (e.g PySyft). Replace [REPO] with the applicable repository name.
 
-      `cd ~/research/[REPO]`
+cd into the target repo (e.g PySyft). Replace [REPO] with the applicable repository name.
+
+`cd ~/research/[REPO]`
 
 Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else.
 
-  - To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log.
+# Bandit
+To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log:
 
-  `bandit -r . >~/research/$now/bandit/[REPO]-report.log`
+`bandit -r . >~/research/$now/bandit/[REPO]-report.log`
 
-  - And a medium to high severity, high confidence one
+And a medium to high severity, high confidence one:
 
-  `bandit -r -iii -ll . >~/research/$now/bandit/[REPO]-iii-ll-report.log`
+`bandit -r -iii -ll . >~/research/$now/bandit/[REPO]-iii-ll-report.log`
 
-  - To run a safety check and save the report
+# Safety
+To run a safety check and save the report:
 
-    `safety check>~/research/$now/safety/[REPO]-safety-check.log`
-
-EXAMPLES:
-bandit -r . >~/research/$now/bandit/$REPO-report.log
-bandit -r -iii -ll -lll . >~/research/$now/bandit/$REPO-iii-ll-lll-report.log
+`safety check>~/research/$now/safety/[REPO]-safety-check.log`
