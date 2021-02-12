@@ -1,0 +1,405 @@
+2021-02-12T15:27:50.974-0500	[33mWARN[0m	unknown severity option: unknown severity:  CRITICAL
+2021-02-12T15:27:52.115-0500	[34mINFO[0m	Detecting Debian vulnerabilities...
+2021-02-12T15:27:52.148-0500	[34mINFO[0m	Detecting  vulnerabilities...
+
+openmined/grid-network:development (debian 10.8)
+================================================
+Total: 88 (UNKNOWN: 9, HIGH: 79)
+
++----------------------+---------------------+----------+-----------------------+---------------+--------------------------------------------------------------+
+|       LIBRARY        |  VULNERABILITY ID   | SEVERITY |   INSTALLED VERSION   | FIXED VERSION |                            TITLE                             |
++----------------------+---------------------+----------+-----------------------+---------------+--------------------------------------------------------------+
+| cpp-8                | CVE-2018-12886      | HIGH     | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| g++-8                | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| gcc-8                | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| gcc-8-base           | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libasan5             | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libatomic1           | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libc-bin             | CVE-2020-1751       |          | 2.28-10               |               | glibc: array overflow in                                     |
+|                      |                     |          |                       |               | backtrace functions for powerpc                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1751                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-1752       |          |                       |               | glibc: use-after-free in glob()                              |
+|                      |                     |          |                       |               | function when expanding ~user                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1752                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2021-3326       |          |                       |               | glibc: Assertion failure in                                  |
+|                      |                     |          |                       |               | ISO-2022-JP-3 gconv module                                   |
+|                      |                     |          |                       |               | related to combining characters                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2021-3326                         |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libc-dev-bin         | CVE-2020-1751       |          |                       |               | glibc: array overflow in                                     |
+|                      |                     |          |                       |               | backtrace functions for powerpc                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1751                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-1752       |          |                       |               | glibc: use-after-free in glob()                              |
+|                      |                     |          |                       |               | function when expanding ~user                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1752                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2021-3326       |          |                       |               | glibc: Assertion failure in                                  |
+|                      |                     |          |                       |               | ISO-2022-JP-3 gconv module                                   |
+|                      |                     |          |                       |               | related to combining characters                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2021-3326                         |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libc6                | CVE-2020-1751       |          |                       |               | glibc: array overflow in                                     |
+|                      |                     |          |                       |               | backtrace functions for powerpc                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1751                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-1752       |          |                       |               | glibc: use-after-free in glob()                              |
+|                      |                     |          |                       |               | function when expanding ~user                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1752                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2021-3326       |          |                       |               | glibc: Assertion failure in                                  |
+|                      |                     |          |                       |               | ISO-2022-JP-3 gconv module                                   |
+|                      |                     |          |                       |               | related to combining characters                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2021-3326                         |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libc6-dev            | CVE-2020-1751       |          |                       |               | glibc: array overflow in                                     |
+|                      |                     |          |                       |               | backtrace functions for powerpc                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1751                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-1752       |          |                       |               | glibc: use-after-free in glob()                              |
+|                      |                     |          |                       |               | function when expanding ~user                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-1752                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2021-3326       |          |                       |               | glibc: Assertion failure in                                  |
+|                      |                     |          |                       |               | ISO-2022-JP-3 gconv module                                   |
+|                      |                     |          |                       |               | related to combining characters                              |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2021-3326                         |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libcc1-0             | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libcurl3-gnutls      | CVE-2020-8169       |          | 7.64.0-4+deb10u1      |               | libcurl: partial password                                    |
+|                      |                     |          |                       |               | leak over DNS on HTTP redirect                               |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-8169                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-8177       |          |                       |               | curl: Incorrect argument                                     |
+|                      |                     |          |                       |               | check can allow remote servers                               |
+|                      |                     |          |                       |               | to overwrite local files...                                  |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-8177                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-8231       |          |                       |               | curl: Expired pointer                                        |
+|                      |                     |          |                       |               | dereference via multi API with                               |
+|                      |                     |          |                       |               | `CURLOPT_CONNECT_ONLY` option set                            |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-8231                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-8285       |          |                       |               | curl: malicious FTP server can                               |
+|                      |                     |          |                       |               | trigger stack overflow when                                  |
+|                      |                     |          |                       |               | CURLOPT_CHUNK_BGN_FUNCTION                                   |
+|                      |                     |          |                       |               | is used...                                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-8285                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-8286       |          |                       |               | curl: inferior OCSP verification                             |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-8286                         |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libgcc-8-dev         | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libgcc1              | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+----------+-----------------------+---------------+--------------------------------------------------------------+
+| libglib2.0-0         | TEMP-0000000-300CAD | UNKNOWN  | 2.58.3-2+deb10u2      |               | -->security-tracker.debian.org/tracker/TEMP-0000000-300CAD   |
++----------------------+                     +          +                       +---------------+                                                              +
+| libglib2.0-data      |                     |          |                       |               |                                                              |
++----------------------+---------------------+----------+-----------------------+---------------+--------------------------------------------------------------+
+| libgnutls30          | CVE-2020-24659      | HIGH     | 3.6.7-4+deb10u6       |               | gnutls: Heap buffer                                          |
+|                      |                     |          |                       |               | overflow in handshake with                                   |
+|                      |                     |          |                       |               | no_renegotiation alert sent                                  |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-24659                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libgomp1             | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libidn2-0            | CVE-2019-12290      |          | 2.0.5-1+deb10u1       |               | GNU libidn2 before 2.2.0                                     |
+|                      |                     |          |                       |               | fails to perform the roundtrip                               |
+|                      |                     |          |                       |               | checks specified in...                                       |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-12290                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libitm1              | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| liblsan0             | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libmpx2              | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libpcre2-8-0         | CVE-2019-20454      |          | 10.32-5               |               | pcre: Out of bounds read in                                  |
+|                      |                     |          |                       |               | JIT mode when \X is used...                                  |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-20454                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libpython3.7         | CVE-2020-26116      |          | 3.7.3-2+deb10u2       |               | python: CRLF injection via HTTP                              |
+|                      |                     |          |                       |               | request method in httplib/http.client                        |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-26116                        |
++----------------------+                     +          +                       +---------------+                                                              +
+| libpython3.7-dev     |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
++----------------------+                     +          +                       +---------------+                                                              +
+| libpython3.7-minimal |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
++----------------------+                     +          +                       +---------------+                                                              +
+| libpython3.7-stdlib  |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libquadmath0         | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libsqlite3-0         | CVE-2019-19603      |          | 3.27.2-3+deb10u1      |               | sqlite: mishandles certain SELECT                            |
+|                      |                     |          |                       |               | statements with a nonexistent                                |
+|                      |                     |          |                       |               | VIEW, leading to DoS...                                      |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-19603                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libssh2-1            | CVE-2019-13115      |          | 1.8.0-2.1             |               | libssh2: integer overflow in                                 |
+|                      |                     |          |                       |               | kex_method_diffie_hellman_group_exchange_sha256_key_exchange |
+|                      |                     |          |                       |               | in kex.c leads to out-of-bounds write                        |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-13115                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libstdc++-8-dev      | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libstdc++6           | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libsystemd0          | CVE-2019-3843       |          | 241-7~deb10u6         |               | systemd: services with DynamicUser                           |
+|                      |                     |          |                       |               | can create SUID/SGID binaries                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-3843                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-3844       |          |                       |               | systemd: services with DynamicUser                           |
+|                      |                     |          |                       |               | can get new privileges and                                   |
+|                      |                     |          |                       |               | create SGID binaries...                                      |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-3844                         |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libtsan0             | CVE-2018-12886      |          | 8.3.0-6               |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +                       +---------------+--------------------------------------------------------------+
+| libubsan1            | CVE-2018-12886      |          |                       |               | gcc: spilling of stack                                       |
+|                      |                     |          |                       |               | protection address in cfgexpand.c                            |
+|                      |                     |          |                       |               | and function.c leads to...                                   |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2018-12886                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-15847      |          |                       |               | gcc: POWER9 "DARN" RNG intrinsic                             |
+|                      |                     |          |                       |               | produces repeated output                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-15847                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libudev1             | CVE-2019-3843       |          | 241-7~deb10u6         |               | systemd: services with DynamicUser                           |
+|                      |                     |          |                       |               | can create SUID/SGID binaries                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-3843                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-3844       |          |                       |               | systemd: services with DynamicUser                           |
+|                      |                     |          |                       |               | can get new privileges and                                   |
+|                      |                     |          |                       |               | create SGID binaries...                                      |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-3844                         |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| libxml2              | CVE-2017-16932      |          | 2.9.4+dfsg1-7+deb10u1 |               | libxml2: Infinite recursion                                  |
+|                      |                     |          |                       |               | in parameter entities                                        |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2017-16932                        |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| linux-libc-dev       | CVE-2013-7445       |          | 4.19.171-2            |               | kernel: memory exhaustion via                                |
+|                      |                     |          |                       |               | crafted Graphics Execution                                   |
+|                      |                     |          |                       |               | Manager (GEM) objects                                        |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2013-7445                         |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-19378      |          |                       |               | kernel: out-of-bounds write in                               |
+|                      |                     |          |                       |               | index_rbio_pages in fs/btrfs/raid56.c                        |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-19378                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-19449      |          |                       |               | kernel: mounting a crafted                                   |
+|                      |                     |          |                       |               | f2fs filesystem image can lead                               |
+|                      |                     |          |                       |               | to slab-out-of-bounds read...                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-19449                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2019-19814      |          |                       |               | kernel: out-of-bounds write                                  |
+|                      |                     |          |                       |               | in __remove_dirty_segment                                    |
+|                      |                     |          |                       |               | in fs/f2fs/segment.c                                         |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-19814                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-11725      |          |                       |               | kernel: improper handling of                                 |
+|                      |                     |          |                       |               | private_size*count multiplication                            |
+|                      |                     |          |                       |               | due to count=info->owner typo                                |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-11725                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-16119      |          |                       |               | kernel: DCCP CCID structure                                  |
+|                      |                     |          |                       |               | use-after-free may lead to                                   |
+|                      |                     |          |                       |               | DoS or code execution...                                     |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-16119                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-29374      |          |                       |               | kernel: the get_user_pages                                   |
+|                      |                     |          |                       |               | implementation when used for a                               |
+|                      |                     |          |                       |               | copy-on-write page does not...                               |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-29374                        |
++                      +---------------------+----------+                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-12362      | UNKNOWN  |                       |               | -->avd.aquasec.com/nvd/cve-2020-12362                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-12363      |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-12363                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-12364      |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-12364                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-25670      |          |                       |               | kernel: refcount leak                                        |
+|                      |                     |          |                       |               | in llcp_sock_bind()                                          |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-25670                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-25671      |          |                       |               | kernel: refcount leak                                        |
+|                      |                     |          |                       |               | in llcp_sock_connect()                                       |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-25671                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-25672      |          |                       |               | kernel: memory leak                                          |
+|                      |                     |          |                       |               | in llcp_sock_connect()                                       |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-25672                        |
++                      +---------------------+          +                       +---------------+--------------------------------------------------------------+
+|                      | CVE-2020-25673      |          |                       |               | kernel: non-blocking socket                                  |
+|                      |                     |          |                       |               | in llcp_sock_connect()                                       |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-25673                        |
++----------------------+---------------------+----------+-----------------------+---------------+--------------------------------------------------------------+
+| python-pip-whl       | CVE-2019-20916      | HIGH     | 18.1-5                |               | python-pip: directory traversal                              |
+|                      |                     |          |                       |               | in _download_http_url() function                             |
+|                      |                     |          |                       |               | in src/pip/_internal/download.py                             |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2019-20916                        |
++----------------------+                     +          +                       +---------------+                                                              +
+| python3-pip          |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
++----------------------+---------------------+          +-----------------------+---------------+--------------------------------------------------------------+
+| python3.7            | CVE-2020-26116      |          | 3.7.3-2+deb10u2       |               | python: CRLF injection via HTTP                              |
+|                      |                     |          |                       |               | request method in httplib/http.client                        |
+|                      |                     |          |                       |               | -->avd.aquasec.com/nvd/cve-2020-26116                        |
++----------------------+                     +          +                       +---------------+                                                              +
+| python3.7-dev        |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
++----------------------+                     +          +                       +---------------+                                                              +
+| python3.7-minimal    |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
+|                      |                     |          |                       |               |                                                              |
++----------------------+---------------------+----------+-----------------------+---------------+--------------------------------------------------------------+
+
+app/poetry.lock
+===============
+Total: 1 (UNKNOWN: 0, HIGH: 1)
+
++---------+------------------+----------+-------------------+---------------+---------------------------------------+
+| LIBRARY | VULNERABILITY ID | SEVERITY | INSTALLED VERSION | FIXED VERSION |                 TITLE                 |
++---------+------------------+----------+-------------------+---------------+---------------------------------------+
+| py      | CVE-2020-29651   | HIGH     | 1.9.0             |               | python-py: ReDoS in the py.path.svnwc |
+|         |                  |          |                   |               | component via mailicious input        |
+|         |                  |          |                   |               | to blame functionality...             |
+|         |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-29651 |
++---------+------------------+----------+-------------------+---------------+---------------------------------------+
