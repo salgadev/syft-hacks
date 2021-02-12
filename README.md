@@ -15,9 +15,9 @@ Security research on OpenMined repositories
 
 7. Install security libraries on your environment
 
-`pip install -r requirements.txt`
+     `pip install -r requirements.txt`
 
-If --user error, run `sudo su` before installing but `exit` afterwards.
+     If --user error, run `sudo su` before installing but `exit` afterwards.
 
 8. Clone the target repo (e.g PySyft)
 
@@ -30,15 +30,15 @@ If --user error, run `sudo su` before installing but `exit` afterwards.
 
   `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety`
 
-# Attacking/Researching the target repo
+# Researching the target repo
 
-cd into the target repo (e.g PySyft). Replace [REPO] with the applicable repository name.
+Change directory into the target repo (e.g PySyft). *Replace **[REPO]** with the applicable repository name.*
 
 `cd ~/research/[REPO]`
 
 Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else.
 
-# Bandit
+## Bandit
 To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log:
 
 `bandit -r . >~/research/$now/bandit/[REPO]-report.log`
@@ -47,7 +47,7 @@ And a medium to high severity, high confidence one:
 
 `bandit -r -iii -ll . >~/research/$now/bandit/[REPO]-iii-ll-report.log`
 
-# Safety
+## Safety
 To run a safety check and save the report:
 
 `safety check>~/research/$now/safety/[REPO]-safety-check.log`

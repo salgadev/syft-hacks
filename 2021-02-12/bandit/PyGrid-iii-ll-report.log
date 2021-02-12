@@ -1,0 +1,68 @@
+Run started:2021-02-12 18:13:19.152883
+
+Test results:
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: ./apps/infrastructure/api/providers/aws/serverless.py:385
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+384	
+385	        subprocess.call(bash_script, shell=True)
+386	        return os.path.join(pygrid_dir, f"{self.config.app.name}.zip")
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: ./apps/infrastructure/api/providers/gcp/gcp.py:36
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+35	            f'gcloud compute zones list --filter="REGION:( {region} )" --format="value(NAME)"',
+36	            shell=True,
+37	            stdout=subprocess.PIPE,
+38	            universal_newlines=True,
+39	        )
+40	        zones = proc.stdout.read()
+41	        return zones.split()
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: ./apps/infrastructure/api/providers/gcp/gcp.py:46
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+45	            f'gcloud compute machine-types list --filter="ZONE:( {zone} )" --format="value(NAME)"',
+46	            shell=True,
+47	            stdout=subprocess.PIPE,
+48	            universal_newlines=True,
+49	        )
+50	        machines = proc.stdout.read()
+51	        return machines.split()
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: ./apps/infrastructure/api/providers/gcp/gcp.py:56
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+55	            f'gcloud compute images list --format="value(NAME,PROJECT,FAMILY)"',
+56	            shell=True,
+57	            stdout=subprocess.PIPE,
+58	            universal_newlines=True,
+59	        )
+60	        images = proc.stdout.read().split()
+61	        images = {
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 21184
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 1244.0
+		Medium: 4.0
+		High: 4.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 124.0
+		High: 1128.0
+Files skipped (0):
