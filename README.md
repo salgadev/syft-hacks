@@ -8,9 +8,9 @@ Security research on OpenMined repositories. Part of the PySyft and PyGrid core 
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
-          -[Bandit](#bandit)
-          -[Safety](#safety)
-          -[Trivy](#trivy)
+          - [Bandit](#bandit)
+          - [Safety](#safety)
+          - [Trivy](#trivy)
 - [Contributing](#contributing)
 - [License](#license)
 
