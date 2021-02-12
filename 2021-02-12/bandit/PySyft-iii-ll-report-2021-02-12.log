@@ -1,0 +1,290 @@
+Run started:2021-02-12 15:02:00.486774
+
+Test results:
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   Location: ./examples/duet/super_resolution/original/data.py:26
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b310-urllib-urlopen
+25	
+26	        data = urllib.request.urlopen(url)
+27	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/bool/bool_test.py:21
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+20	    assert repr(SyTrue) == String("True")
+21	    assert eval(repr(SyFalse)) == SyFalse
+22	    assert eval(repr(SyTrue)) == SyTrue
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/bool/bool_test.py:22
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+21	    assert eval(repr(SyFalse)) == SyFalse
+22	    assert eval(repr(SyTrue)) == SyTrue
+23	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/collections/ordered_dict/ordered_dict_sanity_test.py:342
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+341	
+342	    check(eval(repr(od)))
+343	    update_test = OrderedDict()
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/collections/ordered_dict/ordered_dict_sanity_test.py:385
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+384	    for proto in range(-1, pickle.HIGHEST_PROTOCOL + 1):
+385	        dup = pickle.loads(pickle.dumps(od, proto))
+386	        assert dup is not od
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/collections/ordered_dict/ordered_dict_sanity_test.py:398
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+397	    )
+398	    assertEqual(eval(repr(od)), od)
+399	    assertEqual(repr(OrderedDict()), "OrderedDict()")
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/complex/complex_test.py:558
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+557	            if not any(ch in lit for ch in "xXoObB"):
+558	                self.assertEqual(Complex(lit), eval(lit))
+559	                self.assertEqual(Complex(lit), Complex(lit.replace("_", "")))
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/complex/complex_test.py:698
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+697	                z = Complex(x, y)
+698	                roundtrip = eval(repr(z))
+699	                # adding 0.0 has no effect beside changing -0.0 to 0.0
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:55
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+54	            dictliteral = "{" + ", ".join(formatted_items) + "}"
+55	            self.assertEqual(eval(dictliteral), Dict(items))
+56	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:858
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+857	            with self.assertRaises(CustomException):
+858	                exec(stmt, locals())
+859	
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1180
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1179	            d = pickle.dumps(it, proto)
+1180	            it = pickle.loads(d)
+1181	            self.assertEqual(list(it), list(data))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1183
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1182	
+1183	            it = pickle.loads(d)
+1184	            try:
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1189
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1188	            d = pickle.dumps(it, proto)
+1189	            it = pickle.loads(d)
+1190	            del data[drop]
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1201
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1200	                d = pickle.dumps(itorg, proto)
+1201	                it = pickle.loads(d)
+1202	                # note that the type of the unpickled iterator
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1210
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1209	
+1210	                it = pickle.loads(d)
+1211	                drop = next(it)
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1213
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1212	                d = pickle.dumps(it, proto)
+1213	                it = pickle.loads(d)
+1214	                del data[drop[0]]
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1225
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1224	                d = pickle.dumps(it, proto)
+1225	                it = pickle.loads(d)
+1226	                self.assertEqual(list(it), list(data.values()))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1228
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1227	
+1228	                it = pickle.loads(d)
+1229	                drop = next(it)
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1231
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1230	                d = pickle.dumps(it, proto)
+1231	                it = pickle.loads(d)
+1232	                values = list(it) + [drop]
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1242
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1241	                d = pickle.dumps(it, proto)
+1242	                it = pickle.loads(d)
+1243	                self.assertEqual(list(it), list(reversed(data)))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1245
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1244	
+1245	                it = pickle.loads(d)
+1246	                try:
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1251
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1250	                d = pickle.dumps(it, proto)
+1251	                it = pickle.loads(d)
+1252	                del data[drop]
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1263
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1262	                d = pickle.dumps(itorg, proto)
+1263	                it = pickle.loads(d)
+1264	                # note that the type of the unpickled iterator
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1272
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1271	
+1272	                it = pickle.loads(d)
+1273	                drop = next(it)
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1275
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1274	                d = pickle.dumps(it, proto)
+1275	                it = pickle.loads(d)
+1276	                del data[drop[0]]
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1287
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1286	                d = pickle.dumps(it, proto)
+1287	                it = pickle.loads(d)
+1288	                self.assertEqual(list(it), list(reversed(data.values())))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1290
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1289	
+1290	                it = pickle.loads(d)
+1291	                drop = next(it)
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/dict/dict_test.py:1293
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b301-pickle
+1292	                d = pickle.dumps(it, proto)
+1293	                it = pickle.loads(d)
+1294	                values = list(it) + [drop]
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/float/float_test.py:169
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+168	        if not any(ch in lit for ch in "jJxXoObB"):
+169	            assert Float(lit) == eval(lit)
+170	            # TODO this should work!!!
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   Location: ./tests/syft/lib/python/int/int_test.py:322
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval
+321	            continue
+322	        assert Int(lit, 0) == eval(lit)
+323	        # TODO: check why is this not working
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 47882
+	Total lines skipped (#nosec): 4
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 1641.0
+		Medium: 30.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 1671.0
+Files skipped (0):
