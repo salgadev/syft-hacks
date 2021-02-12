@@ -1,7 +1,7 @@
 # syft-hacks
 Security research on OpenMined repositories
 
-# Getting started / how to replicate
+## Getting started / how to replicate
 1. Download and install [VMWare Workstation](http://www.vmware.com/go/tryworkstation-win)
 2. Activate [VMWare Workstation](http://www.vmware.com/go/tryworkstation-win) with an [Open-Source license](https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=WKST-1610-OSS&productId=1038)
 3. Download a compatible [Kali Linux VMWare image](https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/) and **load it on VMWare**
@@ -24,13 +24,13 @@ Security research on OpenMined repositories
 9. Housecleaning
   - Make a today's date variable and folder to keep reports organized
 
-  `now=`date +"%Y-%m-%d"` && mkdir ~/research/$now`
+     `now=`date +"%Y-%m-%d"` && mkdir ~/research/$now`
 
   - Make folders for each library you will be using (e.g. Bandit, Safety, etc) inside of today's date folder
 
-  `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety`
+     `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety`
 
-# Researching the target repo
+## Researching the target repo
 
 Change directory into the target repo (e.g PySyft). *Replace **[REPO]** with the applicable repository name.*
 
@@ -38,7 +38,7 @@ Change directory into the target repo (e.g PySyft). *Replace **[REPO]** with the
 
 Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else.
 
-## Bandit
+### Bandit
 To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log:
 
 `bandit -r . >~/research/$now/bandit/[REPO]-report.log`
@@ -47,7 +47,7 @@ And a medium to high severity, high confidence one:
 
 `bandit -r -iii -ll . >~/research/$now/bandit/[REPO]-iii-ll-report.log`
 
-## Safety
-To run a safety check and save the report:
+### Safety
+To run a safety check of your virtual environment and save the report, run the following:
 
 `safety check>~/research/$now/safety/[REPO]-safety-check.log`
