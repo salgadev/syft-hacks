@@ -5,24 +5,23 @@ Security research on OpenMined repositories
 1. Download and install [VMWare Workstation](http://www.vmware.com/go/tryworkstation-win)
 2. Activate [VMWare Workstation](http://www.vmware.com/go/tryworkstation-win) with an [Open-Source license](https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=WKST-1610-OSS&productId=1038)
 3. Download a compatible [Kali Linux VMWare image](https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/) and **load it on VMWare**
-4. Inside your Kali Linux, [Make Python3 the default Python](https://thequickblog.com/how-to-change-default-version-of-python-as-python3/) of your VM
+4. Inside your Kali Linux, [Make Python3 the default Python](https://thequickblog.com/how-to-change-default-version-of-python-as-python3/)
 5. Install [virtualenv](https://pypi.org/project/virtualenv/) to avoid [Anaconda](https://www.anaconda.com/) and messing with Kali's Python settings.
-6. Make a virtual environment with [virtualenv](https://pypi.org/project/virtualenv/)
-7. Activate it with the `source` command, mine looks like this:
+6. Make a virtual environment with [virtualenv](https://pypi.org/project/virtualenv/) and activate it with the `source` command, mine looks like this:
 
      `source /home/kali/syft_venv/sec_audit/bin/activate`
 
      Do this **every time before you start** working.
 
-8. Install security libraries on your environment
+7. Install security libraries on your environment
 
   `pip install -r requirements.txt`
 
   If --user error, run `sudo su` before installing but `exit` afterwards.
 
-9. Clone the target repo (e.g PySyft)
+8. Clone the target repo (e.g PySyft)
 
-9.9. Housecleaning
+9. Housecleaning
   - Make a today's date variable and folder to keep reports organized
 
   `now=`date +"%Y-%m-%d"` && mkdir ~/research/$now`
@@ -31,18 +30,23 @@ Security research on OpenMined repositories
 
   `mkdir ~/research/$now/bandit && mkdir ~/research/$now/safety`
 
-10. Attack/Research the target repo
-  - cd into the target repo (e.g PySyft)
+# Attacking/Researching the target repo
+  - cd into the target repo (e.g PySyft). Replace [REPO] with the applicable repository name.
 
-      `cd ~/research/PySyft`
+      `cd ~/research/[REPO]`
 
-  - To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log
+Better yet, for example, you can `export REPO=PyGrid` and replace [REPO] with $REPO everywhere else. 
 
-        `bandit -r . >~/research/$now/bandit/PySyft-report.log`
+  - To run a [bandit](https://pypi.org/project/bandit/) generalized check and write a report log.
+
+  `bandit -r . >~/research/$now/bandit/[REPO]-report.log`
+
+  bandit -r . >~/research/$now/bandit/$REPO-report.log
 
   - And a medium to high severity, high confidence one
 
-        `bandit -r -iii -ll . >~/research/$now/bandit/PySyft-iii-ll-report.log`
+  `bandit -r -iii -ll . >~/research/$now/bandit/[REPO]-iii-ll-report.log`
 
   - To run a safety check and save the report
-    `safety check>~/research/$now/safety/safety-check.log`
+
+    `safety check>~/research/$now/safety/[REPO]-safety-check.log`
