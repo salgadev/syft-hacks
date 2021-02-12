@@ -15,9 +15,9 @@ Security research on OpenMined repositories
 
 7. Install security libraries on your environment
 
-    `pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
-  If --user error, run `sudo su` before installing but `exit` afterwards.
+If --user error, run `sudo su` before installing but `exit` afterwards.
 
 8. Clone the target repo (e.g PySyft)
 
