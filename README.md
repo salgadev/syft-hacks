@@ -72,6 +72,8 @@ This setup is to test the PyGrid runtime and hunt for remote code execution vuln
 
     `deb [arch=amd64] https://download.docker.com/linux/debian buster stable`
 
+    Note: You may get prompts about overwriting parameters on dependencies. **Do not** accept any changes.
+
 4. Clone [PyGrid](https://github.com/OpenMined/PyGrid) and jump to [Usage: Parrot](#parrot) to test with this setup.
 
 
